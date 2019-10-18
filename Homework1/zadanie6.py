@@ -4,12 +4,12 @@ def get_largest_perimeter(l):
     for i in range(0, d-2):
         for j in range(i+1, d-1):
             for k in range(j+1, d):
-                if l[i]+l[j] > l[k] and l[i]+l[k] > l[j] and l[k]+l[j] > l[i] and l[i]+l[j]+l[k] > max:
-                    max = l[i]+l[j]+l[k]
+                if l[i] + l[j] > l[k] and l[i] + l[k] > l[j] and l[k] + l[j] > l[i] and l[i] + l[j] + l[k] > max:
+                    max = l[i] + l[j] + l[k]
     if max == 0:
         print('No perimeter')
     else:
-        print('The largest perimeter = '+str(max))
+        print('The largest perimeter = ' + str(max))
 
 
 if __name__ == '__main__':
