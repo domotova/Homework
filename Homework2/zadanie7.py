@@ -9,4 +9,4 @@ def get_three_sum(nums, k):
 if __name__ == '__main__':
     nums = input("nums = ").split()
     k = int(input("target = "))
-    print(get_two_sum(nums, k))
+    print(get_three_sum(nums, k))

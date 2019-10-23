@@ -9,7 +9,6 @@ def is_power_of_two(n):
             else:
                 k = 1
                 return False
-                break
         if k == 0:
             return True
 

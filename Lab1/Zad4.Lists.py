@@ -1,14 +1,15 @@
-s = [0] * 3
-print(s)
-s[0] += 1
-print(s)
+if __name__ == '__main__':
+    s = [0] * 3
+    print(s)
+    s[0] += 1
+    print(s)
 
-s = [''] * 3
-print(s)
-s[0] += 'a'
-print(s)
+    s = [''] * 3
+    print(s)
+    s[0] += 'a'
+    print(s)
 
-s = [[]] * 3
-print(s)
-s[0] += [1]
-print(s)
+    s = [[]] * 3
+    print(s)
+    s[0] += [1]
+    print(s)
