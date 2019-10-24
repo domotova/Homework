@@ -1,7 +1,6 @@
 def cyclic_string_generator(path):
     with open(path) as f:
         k = sum(1 for _ in f)
-
     while True:
         with open(path) as f:
             for i in range(k):
