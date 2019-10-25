@@ -4,14 +4,10 @@ def cyclic_string_generator(filename):
             yield line.strip()
 
 
-def filter_generator(filename):
-    for line in cyclic_string_generator(filename):
-        yield list(filter(lambda str: "NOD19" in str, line))
-
-
 if __name__ == '__main__':
-    gen = filter_generator("file.txt")
-    for i, line in enumerate(gen):
+    gen = cyclic_string_generator("file.txt")
+    filtered_nod = filter(lambda x: "NOD19" in x, gen)
+    for i, line in enumerate(filtered_nod):
         print(line)
         if i > 50:
             break
