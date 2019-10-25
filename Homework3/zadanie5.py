@@ -1,16 +1,12 @@
-def cyclic_string_generator(path):
-    with open(path) as f:
-        k = sum(1 for _ in f)
+def cyclic_string_generator(filename):
     while True:
-        with open(path) as f:
-            for i in range(k):
-                new_line = f.readline()
-                yield new_line
+        for line in open(filename):
+            yield line.strip()
 
 
-def filter_generator(path):
-    for line in cyclic_string_generator(path):
-        yield list(filter(lambda x: x == "N", line))
+def filter_generator(filename):
+    for line in cyclic_string_generator(filename):
+        yield list(filter(lambda str: "NOD19" in str, line))
 
 
 if __name__ == '__main__':

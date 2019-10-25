@@ -1,11 +1,7 @@
-def cyclic_string_generator(path):
-    with open(path) as f:
-        k = sum(1 for _ in f)
+def cyclic_string_generator(filename):
     while True:
-        with open(path) as f:
-            for i in range(k):
-                new_line = f.readline()
-                yield new_line
+        for line in open(filename):
+            yield line.strip()
 
 
 def len_string_generator(path):
