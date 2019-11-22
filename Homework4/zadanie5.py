@@ -1,32 +1,38 @@
+class Node:
+    def __init__(self, value=None, next=None):
+        self.value = value
+        self.next = next
+
+
 class LinkedList:
     def __init__(self):
         self.first = None
         self.last = None
 
-    def node(self, value = None, next = None):
-        self.value = value
-        self.next = next
-
     def __str__(self):
-        if self.first != None:
+        if self.first is not None:
             current = self.first
-            out = 'LinkedList [' +str(current.value) +'\n'
-            while current.next != None:
+            out = 'LinkedList [\n'+str(current.value)+'\n'
+            while current.next is not None:
                 current = current.next
-                out += str(current.value) + '\n'
-            return out + ']'
+                out += str(current.value)+'\n'
+            return out+']'
         return 'LinkedList []'
 
     def clear(self):
         self.__init__()
 
     def add(self, x):
-        if self.first == None:
-            self.first.value = x
-            self.last.next = None
+        if self.first is None:
+            self.first = Node(x, None)
+            self.last = self.first
+        elif self.last == self.first:
+            self.last = Node(x, None)
+            self.first.next = self.last
         else:
-            self.last.next = self.first
-            self.first.value = x
+            current = Node(x, None)
+            self.last.next = current
+            self.last = current
 
 
 if __name__ == '__main__':

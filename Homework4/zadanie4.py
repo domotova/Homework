@@ -29,4 +29,11 @@ if __name__ == '__main__':
     print(x)
     print(x.isEmpty())
     print(x.pop())
+    print(x)
+    print(x.isEmpty())
+    print(x.pop())
+    print(x)
+    print(x.isEmpty())
+    print(x.pop())
+    print(x.isEmpty())
 
