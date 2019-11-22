@@ -1,5 +1,5 @@
 class Vertex:
-    def __init__(self, names='', edges=0):
+    def __init__(self, names='', edges=None):
         self.name = names
         self.edges = {}
         for i, j in names, edges:
@@ -21,3 +21,48 @@ class Edge:
 
 
 class SimpleGraph:
+    def __init__(self, verts=[], edges=[]):
+        pass
+
+    def __repr__(self):
+        pass
+
+    def add_vertex(v):
+        pass
+
+    def add_edge(v_1, v_2):
+        pass
+
+    def contains_vertex(v):
+        pass
+
+    def contains_edge(v_1, v_2):
+        pass
+
+    def get_neighbors(v):
+        pass
+
+    def is_empty():
+        pass
+
+    def size():
+        pass
+
+    def remove_vertex(v):
+        pass
+
+    def remove_edge(v_1, v_2):
+        pass
+
+    def is_neighbor(v1, v2):
+        pass
+
+    def is_reachable(v1, v2):
+        pass
+
+    def clear_all():
+        pass
+
+
+if __name__ == '__main__':
+
