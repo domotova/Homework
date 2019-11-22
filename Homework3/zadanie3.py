@@ -1,7 +1,8 @@
 def cyclic_string_generator(filename):
     while True:
-        for line in open(filename):
-            yield line.strip()
+        with open(filename, "r") as f:
+            for line in f:
+                yield line.strip()
 
 
 if __name__ == '__main__':
