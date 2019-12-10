@@ -1,14 +1,6 @@
 import requests
 
-BOT_API_TOKEN = "986116634:AAFTmeF-dvuDsA-TjHTMA68l9b-onmY6RL0"
-
-
-# CHAT_ID = "@nefu_puthon"
-# url = URL.format(
-#   BOT_API_TOKEN,
-#   CHAT_ID,
-#   "privet:333!"
-# )
+BOT_API_TOKEN = "1007041613:AAF0hQTrpaw-PREqTqnSbfAD9HKvolZVgVA"
 
 
 def send_response(user_id, text):
@@ -23,14 +15,15 @@ def send_response(user_id, text):
     requests.get(url)
 
 
-READ_URL = "https://api.telegram.org/bot{}/getUpdates"
-url = READ_URL.format(BOT_API_TOKEN)
-response = requests.get(url)
-updates = response.json().get("result", [])
-for msg in updates:
-    text = msg["message"]["text"]
-    user_id = msg["message"]["from"]["id"]
+if __name__ == '__main__':
+    READ_URL = "https://api.telegram.org/bot{}/getUpdates"
+    url = READ_URL.format(BOT_API_TOKEN)
+    response = requests.get(url)
+    updates = response.json().get("result", [])
+    for msg in updates:
+        text = msg["message"]["text"]
+        user_id = msg["message"]["from"]["id"]
 
-    if "погода" not in text.lower():
-        continue
-    send_response(user_id, "Сейчас в Якутске холодно.")
+        if "погода" not in text.lower():
+            continue
+        send_response(user_id, "Сейчас в Якутске холодно.")
